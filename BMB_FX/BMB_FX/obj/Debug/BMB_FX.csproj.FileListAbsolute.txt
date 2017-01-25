@@ -6,7 +6,6 @@ E:\GitRep\BMB_FX\BMB_FX\BMB_FX\bin\Debug\MySql.Data.Entity.dll
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\bin\Debug\MySql.Fabric.Plugin.dll
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\bin\Debug\MySql.Web.dll
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.csprojResolveAssemblyReference.cache
-E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.Form1.resources
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.Properties.Resources.resources
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.Simple_Table_Editor.resources
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.csproj.GenerateResource.Cache
@@ -14,3 +13,7 @@ E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.exe
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.pdb
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.MainForm.resources
 E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.Table_Editor_Multi_Table.resources
+E:\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.Window_Search.resources
+C:\Users\AlexDark\Desktop\GitRep\BMB_FX\BMB_FX\BMB_FX\bin\Debug\BMB_FX.exe.config
+C:\Users\AlexDark\Desktop\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.exe
+C:\Users\AlexDark\Desktop\GitRep\BMB_FX\BMB_FX\BMB_FX\obj\Debug\BMB_FX.pdb

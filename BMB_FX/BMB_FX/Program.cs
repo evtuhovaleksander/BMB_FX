@@ -14,6 +14,17 @@ namespace BMB_FX
         [STAThread]
         static void Main()
         {
+
+
+
+            TEST_CLASS cl=new TEST_CLASS();
+            cl.test();
+
+
+
+
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

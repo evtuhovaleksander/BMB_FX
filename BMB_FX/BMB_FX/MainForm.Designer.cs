@@ -38,6 +38,7 @@
             this.gapdurationДлительностьОкнаНаРаботуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceУслугаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicecheckЦенаУслугиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.winToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,8 @@
             // 
             // mainFormsToolStripMenuItem
             // 
+            this.mainFormsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.winToolStripMenuItem});
             this.mainFormsToolStripMenuItem.Name = "mainFormsToolStripMenuItem";
             this.mainFormsToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.mainFormsToolStripMenuItem.Text = "Main Forms";
@@ -120,6 +123,13 @@
             this.servicecheckЦенаУслугиToolStripMenuItem.Text = "service_check - цена услуги";
             this.servicecheckЦенаУслугиToolStripMenuItem.Click += new System.EventHandler(this.servicecheckЦенаУслугиToolStripMenuItem_Click);
             // 
+            // winToolStripMenuItem
+            // 
+            this.winToolStripMenuItem.Name = "winToolStripMenuItem";
+            this.winToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.winToolStripMenuItem.Text = "win";
+            this.winToolStripMenuItem.Click += new System.EventHandler(this.winToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,5 +158,6 @@
         private System.Windows.Forms.ToolStripMenuItem requestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceУслугаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicecheckЦенаУслугиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem winToolStripMenuItem;
     }
 }

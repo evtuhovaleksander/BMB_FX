@@ -44,5 +44,10 @@ namespace BMB_FX
         {
             Simple_Table_Editor.Form_Lauch("Select id,date,prise from service_check");
         }
+
+        private void winToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Window_Search().Show();
+        }
     }
 }

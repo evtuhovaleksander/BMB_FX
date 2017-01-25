@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace BMB_FX
 {
-    class DataGridView_BMB :DataGridView
+   public  class DataGridView_BMB :DataGridView
     {
         const int offset=20;
         SQL cl;

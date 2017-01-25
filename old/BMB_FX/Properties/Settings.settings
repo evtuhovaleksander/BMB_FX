@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BMB_FX.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=127.0.0.1;database=testpr;user id=tu;password=QAz1234567890;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

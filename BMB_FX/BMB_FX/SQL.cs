@@ -53,13 +53,32 @@ namespace BMB_FX
         {
             SQL cl = new SQL();
             cl.comand = new MySqlCommand(queue, cl.sqlConnection);
-            return cl.comand.ExecuteScalar();
+            object rett= cl.comand.ExecuteScalar();
+            cl.sqlConnection.Close();
+            return rett;
         }
 
         public object ReadValue(string queue)
         {
             comand = new MySqlCommand(queue, sqlConnection);
             return comand.ExecuteScalar();
+        }
+
+        public static int ReadValueInt32(string queue)
+        {
+            return ConvertToInt32(SQL.ReadValueStatic(queue));
+        }
+
+        public static int ConvertToInt32(object obj)
+        {
+            if (obj == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
         }
 
         public void prepare_DataAdapter(string queue)
@@ -108,6 +127,47 @@ namespace BMB_FX
             else
             {
                 return obj.ToString();
+            }
+        }
+
+        public void ReadValues(string queue)
+        {
+            comand = new MySqlCommand(queue, sqlConnection);
+            sqlDataReader = comand.ExecuteReader();
+        }
+
+        public static List<string> get_DataSourceForCmBox(string queue)
+        {
+            List<string> rett= new List<string>();
+            SQL cl=new SQL();
+            cl.ReadValues(queue);
+            while(cl.sqlDataReader.Read()) rett.Add(cl.sqlDataReader.GetString(0));
+            cl.sqlConnection.Close();
+            return rett;
+        }
+
+
+        public int getInt32(int ind)
+        {
+            if (sqlDataReader.IsDBNull(ind))
+            {
+                return -1;
+            }
+            else
+            {
+                return sqlDataReader.GetInt32(ind);
+            }
+        }
+
+        public DateTime getDateTime(int ind)
+        {
+            if (sqlDataReader.IsDBNull(ind))
+            {
+                return new DateTime(1970,0,1);
+            }
+            else
+            {
+                return sqlDataReader.GetDateTime(ind);
             }
         }
     }

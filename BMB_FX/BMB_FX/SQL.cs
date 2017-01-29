@@ -49,6 +49,12 @@ namespace BMB_FX
             
         }
 
+        public void Close_Connection()
+        {
+            if(sqlConnection.State==ConnectionState.Open)sqlConnection.Close();
+        }
+
+
         public static object ReadValueStatic(string queue)
         {
             SQL cl = new SQL();
@@ -58,6 +64,15 @@ namespace BMB_FX
             return rett;
         }
 
+        public static void Execute(string queue)
+        {
+            SQL cl = new SQL();
+            cl.comand = new MySqlCommand(queue, cl.sqlConnection);
+            cl.comand.ExecuteNonQuery();
+            cl.sqlConnection.Close();
+            
+        }
+        
         public object ReadValue(string queue)
         {
             comand = new MySqlCommand(queue, sqlConnection);
@@ -146,6 +161,24 @@ namespace BMB_FX
             return rett;
         }
 
+        public static List<string> get_List_String(string queue)
+        {
+            List<string> rett = new List<string>();
+            SQL cl = new SQL();
+            cl.ReadValues(queue);
+            while (cl.sqlDataReader.Read()) rett.Add(cl.getString(0));
+            cl.sqlConnection.Close();
+            return rett;
+        }
+        public static List<int> get_List_Int(string queue)
+        {
+            List<int> rett = new List<int>();
+            SQL cl = new SQL();
+            cl.ReadValues(queue);
+            while (cl.sqlDataReader.Read()) rett.Add(cl.getInt32(0));
+            cl.sqlConnection.Close();
+            return rett;
+        }
 
         public int getInt32(int ind)
         {
@@ -156,6 +189,17 @@ namespace BMB_FX
             else
             {
                 return sqlDataReader.GetInt32(ind);
+            }
+        }
+        public string getString(int ind)
+        {
+            if (sqlDataReader.IsDBNull(ind))
+            {
+                return "null";
+            }
+            else
+            {
+                return sqlDataReader.GetString(ind);
             }
         }
 

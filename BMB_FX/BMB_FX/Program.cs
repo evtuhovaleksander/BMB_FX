@@ -17,8 +17,8 @@ namespace BMB_FX
 
 
 
-            TEST_CLASS cl=new TEST_CLASS();
-            cl.test();
+            //TEST_CLASS cl=new TEST_CLASS();
+            //cl.test();
 
 
 

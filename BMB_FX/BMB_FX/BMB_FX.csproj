@@ -61,22 +61,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinationWindow\Coordination Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinationWindow\Coordination Form.Designer.cs">
+      <DependentUpon>Coordination Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataGridView_BMB.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataTable_BMB.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Interval_Logic_Package.cs" />
-    <Compile Include="Object_Info_Package.cs" />
-    <Compile Include="TEST_CLASS.cs" />
-    <Compile Include="Window_Search.cs">
+    <Compile Include="Search_Window\Interval_Logic_Package.cs" />
+    <Compile Include="Search_Window\Object_Info_Package.cs" />
+    <Compile Include="ORM\Master_ORM.cs" />
+    <Compile Include="ORM\Operation_ORM.cs" />
+    <Compile Include="ORM\Resource_ORM.cs" />
+    <Compile Include="ORM\Service_ORM.cs" />
+    <Compile Include="Search_Window\Window_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window_Search.Designer.cs">
+    <Compile Include="Search_Window\Window_Search.Designer.cs">
       <DependentUpon>Window_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interval_Package.cs" />
+    <Compile Include="Search_Window\Interval_Package.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +114,13 @@
     <Compile Include="Table_Editor_Multi_Table.Designer.cs">
       <DependentUpon>Table_Editor_Multi_Table.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test_Start.cs" />
-    <EmbeddedResource Include="Window_Search.resx">
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinationWindow\Coordination Form.resx">
+      <DependentUpon>Coordination Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_Window\Window_Search.resx">
       <DependentUpon>Window_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -121,7 +141,6 @@
     <EmbeddedResource Include="Table_Editor_Multi_Table.resx">
       <DependentUpon>Table_Editor_Multi_Table.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

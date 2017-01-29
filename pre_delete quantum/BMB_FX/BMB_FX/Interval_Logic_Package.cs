@@ -110,18 +110,18 @@ namespace BMB_FX
 
         
 
-        public static List<Quantum_Interval> prep_inp(int i)
-        {
-            Random r= new Random();
-            List<Quantum_Interval> tt=new List<Quantum_Interval>();
-            for (int j = 0; j < i; j++)
-            {
-                int start = r.Next(0, 288);
-                int stop = r.Next(start, 288);
-                tt.Add(new Quantum_Interval(start,stop));
-            }
-            return tt;
+        //public static List<Quantum_Interval> prep_inp(int i)
+        //{
+        //    Random r= new Random();
+        //    List<Quantum_Interval> tt=new List<Quantum_Interval>();
+        //    for (int j = 0; j < i; j++)
+        //    {
+        //        int start = r.Next(0, 288);
+        //        int stop = r.Next(start, 288);
+        //        tt.Add(new Quantum_Interval(start,stop));
+        //    }
+        //    return tt;
 
-        }
+        //}
     }
 }

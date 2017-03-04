@@ -2,8 +2,17 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BMB_FX.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="BaseConnectionString" Type="System.String" Scope="User">
+    <Setting Name="BaseConnectionString2" Type="System.String" Scope="User">
       <Value Profile="(Default)">server=127.0.0.1;database=bmb;user id=bmb;password=QAz1234567890;</Value>
+    </Setting>
+    <Setting Name="BaseConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=us-cdbr-iron-east-04.cleardb.net;database=ad_61b893058fff586;user id=bb214d3bb5ddd4;password=e4bfeb82;</Value>
+    </Setting>
+    <Setting Name="Setting1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BaseConnectionString</Value>
+    </Setting>
+    <Setting Name="Setting2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BluemixBaseConnectionString</Value>
     </Setting>
   </Settings>
 </SettingsFile>

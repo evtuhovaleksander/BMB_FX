@@ -24,11 +24,12 @@ namespace BMB_FX
         public MySqlCommand comand;
         public DataTable_BMB table;
         MySqlCommandBuilder comandBuilder; 
+
         public void Create_Connection() 
         {
             try
             {
-                sqlConnection = new MySqlConnection(Properties.Settings.Default.BaseConnectionString);
+                sqlConnection = new MySqlConnection(Properties.Settings.Default.BaseConnectionString2);
             }
             catch (Exception)
             {
@@ -44,7 +45,7 @@ namespace BMB_FX
             }
             catch (Exception)
             {
-                throw;
+               throw;
             }
             
         }
@@ -59,7 +60,12 @@ namespace BMB_FX
         {
             SQL cl = new SQL();
             cl.comand = new MySqlCommand(queue, cl.sqlConnection);
-            object rett= cl.comand.ExecuteScalar();
+
+            object rettt= cl.comand.ExecuteScalar();
+            if (rettt != null) rettt = rettt.GetType().ToString();
+            object rett = cl.comand.ExecuteScalar();
+            if (rettt == null) { rett = null;}else { if (rettt.ToString() == "System.DBNull") rett = null;}
+            cl.Close_Connection();
             cl.sqlConnection.Close();
             return rett;
         }
@@ -84,6 +90,11 @@ namespace BMB_FX
             return ConvertToInt32(SQL.ReadValueStatic(queue));
         }
 
+        public static double ReadValueDouble(string queue)
+        {
+            return ConvertToDouble(SQL.ReadValueStatic(queue));
+        }
+
         public static int ConvertToInt32(object obj)
         {
             if (obj == null)
@@ -95,12 +106,22 @@ namespace BMB_FX
                 return Convert.ToInt32(obj);
             }
         }
-
+        public static double ConvertToDouble(object obj)
+        {
+            if (obj == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return Convert.ToDouble(obj);
+            }
+        }
         public void prepare_DataAdapter(string queue)
         {
             SqlDataAdapter = new MySqlDataAdapter(new MySqlCommand(queue, sqlConnection));
             comandBuilder = new MySqlCommandBuilder(SqlDataAdapter);
-            SqlDataAdapter.UpdateCommand = comandBuilder.GetUpdateCommand();
+          
         }
 
         public void prepare_DataTable()
@@ -188,7 +209,40 @@ namespace BMB_FX
             }
             else
             {
+                object o = sqlDataReader.GetString(ind);
                 return sqlDataReader.GetInt32(ind);
+            }
+        }
+
+        public int getDouble(int ind)
+        {
+            if (sqlDataReader.IsDBNull(ind))
+            {
+                return -1;
+            }
+            else
+            {
+                object o = sqlDataReader.GetDouble(ind);
+                return sqlDataReader.GetInt32(ind);
+            }
+        }
+
+        public bool getBool(int ind)
+        {
+            if (sqlDataReader.IsDBNull(ind))
+            {
+                return false;
+            }
+            else
+            {
+                if (sqlDataReader.GetInt32(ind) == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
         public string getString(int ind)
@@ -213,6 +267,11 @@ namespace BMB_FX
             {
                 return sqlDataReader.GetDateTime(ind);
             }
+        }
+
+        public void Read()
+        {
+            sqlDataReader.Read();
         }
     }
 }

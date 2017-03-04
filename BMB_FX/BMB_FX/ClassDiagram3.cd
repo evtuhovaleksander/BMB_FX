@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="BMB_FX.ClientForm" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAACAJAAACAAAACAAAAACQEDAAAAAAAAAA=</HashCode>
+      <FileName>Client_Form_Package\ClientForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ClientCoordinationForm" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAASAACAJAAACAAAACAAAAAAQEDAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\ClientCoordinationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Overlapper" Collapsed="true">
+    <Position X="8.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Logic_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Interval_Overlap_Class" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Logic_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Date_Converter" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAgAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Day_TimeLine" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Interval" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAIAAAQgAEAAAAAAAAAgAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BMB_FX.Resource_Interval" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Master_Interval" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Window_Interval" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAICAAAEAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Operation_Window_Interval" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAIAAAAAAABAAIAAAAgAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Sequence">
+    <Position X="21" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="S" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BMB_FX.Master" Collapsed="true">
+    <Position X="6.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAUAAAAAAAAEAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Resource" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAUAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Interval_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.GroupService">
+    <Position X="31.75" Y="1.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Operations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BMB_FX.Operation">
+    <Position X="32.5" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Master_Gui_Container" Collapsed="true">
+    <Position X="10.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Master_Gui" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAACAAAAAQAAAAAIAAAEAAAAAAAAAAABAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Resource_Gui_Container" Collapsed="true">
+    <Position X="6.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Resource_Gui" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAAAACCAAAAQAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Group_Operation_Project">
+    <Position X="24" Y="6" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAhAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Window_Sequences" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BMB_FX.Head_Master_Class" Collapsed="true">
+    <Position X="23" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAAAAgAgEAAAAAAgQAAAAAQAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Head_Container">
+    <Position X="23.5" Y="1" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAIAAAAIAACEAAAAAAAgBIAAACAgEAgAAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="GroupService" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="GOP_List" />
+      <Field Name="HMC_list" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BMB_FX.Master_Info" Collapsed="true">
+    <Position X="12" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Resource_Info" Collapsed="true">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Object_Info_Package.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Window_Search" Collapsed="true">
+    <Position X="8.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAAAAGBEBHAJBAKCEADCAMI8VAAIECNEAAB0AII=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Window_Search.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.DataGridView_BMB" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACABAQAAIABAAAAAAACAAACAAAAAAAAAIAAAAAgAAA=</HashCode>
+      <FileName>DataGridView_BMB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.DataGridView_TimeLine" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAEACAAAAAAAAAAAAAAiAAAAAAAIAAAAAAAAACAAA=</HashCode>
+      <FileName>DataGridView_TimeLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.TimeLineDay" Collapsed="true">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACEAAAAAEAAAAAAAACAAAAAAQAAYCA=</HashCode>
+      <FileName>DataGridView_TimeLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.DataTable_BMB" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataTable_BMB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.DGV_TimeLine" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DGV_TimeLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.EditForm" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAADAAiAAgAAAAACAAAACAAAAAAABBAAAAAAQAAE=</HashCode>
+      <FileName>Elements\Element_Show\EditForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Item_Load_Form" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAACACAACAAAAACAAAACAACIBAABAAAAAAAAAgI=</HashCode>
+      <FileName>Item_Load_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.MainForm" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAABAAxiABAMKAAACQAQgCAIAgAKAAAAAAAQACAAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Operation_Form" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAgBAACQALYADRwAMIrAEAQCCECkgQABESAAgAAAIAQ=</HashCode>
+      <FileName>Operation_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Program" Collapsed="true">
+    <Position X="10.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Randomizer" Collapsed="true">
+    <Position X="12" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Randomizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.RateForm" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAAAACAAYAAAQACAAAACAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>RateForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Samples" Collapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Samples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ScannerForm" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAQACAAAAACAACgAABCAAAAAARAAAAAIAAAAAA=</HashCode>
+      <FileName>ScannerForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Simple_Table_Editor" Collapsed="true">
+    <Position X="10.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAGAACAAAAACAAgACACAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Simple_Table_Editor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.SQL" Collapsed="true">
+    <Position X="12" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIEAAAgAABCEZIAAACgBAiAAQIEAQBDAAAEARAAAg=</HashCode>
+      <FileName>SQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.System_Class" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>System_Class.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Table_Editor_Multi_Table" Collapsed="true">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAGAACAAAAACABABCAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Table_Editor_Multi_Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Work_Form" Collapsed="true">
+    <Position X="10.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAxAABAAESAQCAAAAoiACCACIAAIgBBFCEQAAQBgIAM=</HashCode>
+      <FileName>Work_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.CoordinationWindow.Coordination_Form" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAIAACAEAgQCAACQAAgCAAAAIAEAQAgAgAAEAKA=</HashCode>
+      <FileName>CoordinationWindow\Coordination Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Request_Form_Package.Request_Form" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAIAAASAACABAAACAAAACAEAAAAAAAIAAAAAAAEQ=</HashCode>
+      <FileName>CoordinationWindow\Request_Form_Package\Request_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.CoordinationWindow.Search_Window.Master_Mind" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>CoordinationWindow\Search_Window\Master_Mind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Element_Show.Element" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAACFAIAACAAAAAAQAAA=</HashCode>
+      <FileName>Elements\Element_Show\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Element_Show.Simple_Join_Element" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAERAAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Elements\Element_Show\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Element_Show.SystemVal_Element" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAQAAAAAA=</HashCode>
+      <FileName>Elements\Element_Show\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Element_Show.Element_old" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAACEBCAAAAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Element_Show\Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Element_Show.FormBuilder" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAABBAAAAADgEAgQAAAAAEAEAACEAACAAA=</HashCode>
+      <FileName>Elements\Element_Show\FormBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Element_Show.Table" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAIAQiAAAIABAAAQAAAAAAAAAAAAAAQAgAgA=</HashCode>
+      <FileName>Elements\Element_Show\Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Elements.Element_Show.Search_Form" Collapsed="true">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAACABAAACAEAACAAAAAAAEDAAAAAAAAAA=</HashCode>
+      <FileName>Elements\Element_Show\Search_Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ORM.Client_ORM" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>ORM\Client_ORM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ORM.Master_ORM" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\Master_ORM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ORM.Operation_ORM" Collapsed="true">
+    <Position X="6.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\Operation_ORM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ORM.Resource_ORM" Collapsed="true">
+    <Position X="10.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\Resource_ORM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.ORM.Service_ORM" Collapsed="true">
+    <Position X="6.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAACAAAAAAAAAJAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\Service_ORM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Properties.Resources" Collapsed="true">
+    <Position X="12" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BMB_FX.Properties.Settings" Collapsed="true">
+    <Position X="8.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAQAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

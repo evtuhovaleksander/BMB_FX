@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMB_FX", "BMB_FX\BMB_FX.csproj", "{4BF733FD-6E5A-41E1-9790-421DB1DE7248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentAssistant", "..\..\DocumentAssistant\DocumentAssistant\DocumentAssistant\DocumentAssistant.csproj", "{20D4623A-8C36-499B-A344-0D0AF7DFA2E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BF733FD-6E5A-41E1-9790-421DB1DE7248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF733FD-6E5A-41E1-9790-421DB1DE7248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF733FD-6E5A-41E1-9790-421DB1DE7248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF733FD-6E5A-41E1-9790-421DB1DE7248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D4623A-8C36-499B-A344-0D0AF7DFA2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D4623A-8C36-499B-A344-0D0AF7DFA2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D4623A-8C36-499B-A344-0D0AF7DFA2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D4623A-8C36-499B-A344-0D0AF7DFA2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

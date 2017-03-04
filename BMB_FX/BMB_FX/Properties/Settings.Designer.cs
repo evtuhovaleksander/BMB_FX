@@ -26,12 +26,49 @@ namespace BMB_FX.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("server=127.0.0.1;database=bmb;user id=bmb;password=QAz1234567890;")]
+        public string BaseConnectionString2 {
+            get {
+                return ((string)(this["BaseConnectionString2"]));
+            }
+            set {
+                this["BaseConnectionString2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=us-cdbr-iron-east-04.cleardb.net;database=ad_61b893058fff586;user id=bb214" +
+            "d3bb5ddd4;password=e4bfeb82;")]
         public string BaseConnectionString {
             get {
                 return ((string)(this["BaseConnectionString"]));
             }
             set {
                 this["BaseConnectionString"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BaseConnectionString")]
+        public string Setting1 {
+            get {
+                return ((string)(this["Setting1"]));
+            }
+            set {
+                this["Setting1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BluemixBaseConnectionString")]
+        public string Setting2 {
+            get {
+                return ((string)(this["Setting2"]));
+            }
+            set {
+                this["Setting2"] = value;
             }
         }
     }

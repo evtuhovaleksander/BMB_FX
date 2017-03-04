@@ -11,7 +11,7 @@ namespace BMB_FX
 {
    public  class DataGridView_BMB :DataGridView
     {
-        const int offset=20;
+        const int offset=1;
         SQL cl;
         MySqlDataAdapter adapter;
 
@@ -21,8 +21,13 @@ namespace BMB_FX
             cl.prepare_DataAdapter(queue);
             cl.prepare_DataTable();
             cl.table.translate_Columns();
-
             DataSource = cl.table;
+
+            for (int i = 0; i < Columns.Count; i++)
+            {
+                Columns[i].AutoSizeMode=DataGridViewAutoSizeColumnMode.AllCells;
+            }
+
         }
 
         public void upload_Data()
@@ -40,6 +45,37 @@ namespace BMB_FX
 
         public DataGridView_BMB()
         {
+        }
+
+
+
+
+      public  Dictionary<string, int> ColumnsDictionary = new Dictionary<string, int>();
+
+
+       public void addTextColumn(string text,int i)
+       {
+            DataGridViewTextBoxColumn textColumn;
+            textColumn = new DataGridViewTextBoxColumn();
+            textColumn.HeaderText = text;
+            ColumnsDictionary.Add(text,i);
+            Columns.Add(textColumn);
+        }
+        public void addCheckColumn(string text, int i)
+        {
+            DataGridViewCheckBoxColumn textColumn;
+            textColumn = new DataGridViewCheckBoxColumn();
+            textColumn.HeaderText = text;
+            ColumnsDictionary.Add(text, i);
+            Columns.Add(textColumn);
+        }
+        public void addButtonColumn(string text, int i)
+        {
+            DataGridViewButtonColumn textColumn;
+            textColumn = new DataGridViewButtonColumn();
+            textColumn.HeaderText = text;
+            ColumnsDictionary.Add(text, i);
+            Columns.Add(textColumn);
         }
     }
 }

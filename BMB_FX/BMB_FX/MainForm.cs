@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BMB_FX.CoordinationWindow;
 
 namespace BMB_FX
 {
@@ -48,6 +49,23 @@ namespace BMB_FX
         private void winToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Window_Search().Show();
+        }
+
+        private void workFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if(SQL.ReadValueInt32("select count(*) from masterts"))
+            new Work_Form(3,1).ShowDialog();
+        }
+
+        private void coordFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Coordination_Form().ShowDialog();
+        }
+
+        private void loadItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Item_Load_Form frm = new Item_Load_Form();
+            frm.ShowDialog();
         }
     }
 }

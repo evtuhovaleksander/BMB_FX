@@ -16,5 +16,21 @@ namespace BMB_FX.ORM
                     id.ToString() + ")");
 
         }
+
+        public static string get_res_where_id(int id)
+        {
+            return
+                SQL.ReadValueStatic("select Resource from resource  where (ID=" + id.ToString() + ")").ToString();
+
+
+        }
+
+        public static int get_id_where_res(string res)
+        {
+            return
+                SQL.ReadValueInt32("select m.ID from resource m where (m.Resource='" + res + "')");
+
+
+        }
     }
 }

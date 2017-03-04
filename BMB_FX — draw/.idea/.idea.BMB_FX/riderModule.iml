@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../BMB_FX" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BMB_FX/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BMB_FX/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../packages" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../../DocumentAssistant/DocumentAssistant/DocumentAssistant">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../DocumentAssistant/DocumentAssistant/DocumentAssistant" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../DocumentAssistant/DocumentAssistant/DocumentAssistant/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../DocumentAssistant/DocumentAssistant/DocumentAssistant/obj" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

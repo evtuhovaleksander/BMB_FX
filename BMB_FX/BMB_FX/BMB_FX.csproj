@@ -48,6 +48,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\MySql.Web.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\..\DocumentAssistant\DocumentAssistant\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,11 +64,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientForm.cs">
+    <Compile Include="Client_Form_Package\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientForm.Designer.cs">
+    <Compile Include="Client_Form_Package\ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinationWindow\ClientCoordinationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinationWindow\ClientCoordinationForm.Designer.cs">
+      <DependentUpon>ClientCoordinationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CoordinationWindow\Coordination Form.cs">
       <SubType>Form</SubType>
@@ -73,25 +82,81 @@
     <Compile Include="CoordinationWindow\Coordination Form.Designer.cs">
       <DependentUpon>Coordination Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoordinationWindow\Search_Window\Master_Mind.cs" />
+    <Compile Include="DataGridView_TimeLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataGridView_BMB.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataTable_BMB.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Search_Window\Interval_Logic_Package.cs" />
-    <Compile Include="Search_Window\Object_Info_Package.cs" />
+    <Compile Include="DGV_TimeLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Elements\Element_Show\Element.cs" />
+    <Compile Include="Elements\Element_Show\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elements\Element_Show\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Element_Show\FormBuilder.cs" />
+    <Compile Include="Elements\Element_Show\FuncClass.cs" />
+    <Compile Include="Elements\Element_Show\Search_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Elements\Element_Show\Search_Form.Designer.cs">
+      <DependentUpon>Search_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Element_Show\Table.cs" />
+    <Compile Include="Item_Load_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item_Load_Form.Designer.cs">
+      <DependentUpon>Item_Load_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation_Form.Designer.cs">
+      <DependentUpon>Operation_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORM\Client_ORM.cs" />
+    <Compile Include="Randomizer.cs" />
+    <Compile Include="RateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateForm.Designer.cs">
+      <DependentUpon>RateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinationWindow\Request_Form_Package\Request_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinationWindow\Request_Form_Package\Request_Form.Designer.cs">
+      <DependentUpon>Request_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samples.cs" />
+    <Compile Include="ScannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScannerForm.Designer.cs">
+      <DependentUpon>ScannerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinationWindow\Search_Window\Interval_Logic_Package.cs" />
+    <Compile Include="CoordinationWindow\Search_Window\Object_Info_Package.cs" />
     <Compile Include="ORM\Master_ORM.cs" />
     <Compile Include="ORM\Operation_ORM.cs" />
     <Compile Include="ORM\Resource_ORM.cs" />
     <Compile Include="ORM\Service_ORM.cs" />
-    <Compile Include="Search_Window\Window_Search.cs">
+    <Compile Include="CoordinationWindow\Search_Window\Window_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Search_Window\Window_Search.Designer.cs">
+    <Compile Include="CoordinationWindow\Search_Window\Window_Search.Designer.cs">
       <DependentUpon>Window_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Search_Window\Interval_Package.cs" />
+    <Compile Include="CoordinationWindow\Search_Window\Interval_Package.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,13 +179,43 @@
     <Compile Include="Table_Editor_Multi_Table.Designer.cs">
       <DependentUpon>Table_Editor_Multi_Table.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ClientForm.resx">
+    <Compile Include="Work_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Work_Form.Designer.cs">
+      <DependentUpon>Work_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Client_Form_Package\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinationWindow\ClientCoordinationForm.resx">
+      <DependentUpon>ClientCoordinationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CoordinationWindow\Coordination Form.resx">
       <DependentUpon>Coordination Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Search_Window\Window_Search.resx">
+    <EmbeddedResource Include="Elements\Element_Show\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elements\Element_Show\Search_Form.resx">
+      <DependentUpon>Search_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item_Load_Form.resx">
+      <DependentUpon>Item_Load_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation_Form.resx">
+      <DependentUpon>Operation_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RateForm.resx">
+      <DependentUpon>RateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinationWindow\Request_Form_Package\Request_Form.resx">
+      <DependentUpon>Request_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScannerForm.resx">
+      <DependentUpon>ScannerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinationWindow\Search_Window\Window_Search.resx">
       <DependentUpon>Window_Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -141,6 +236,12 @@
     <EmbeddedResource Include="Table_Editor_Multi_Table.resx">
       <DependentUpon>Table_Editor_Multi_Table.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Work_Form.resx">
+      <DependentUpon>Work_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,6 +255,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

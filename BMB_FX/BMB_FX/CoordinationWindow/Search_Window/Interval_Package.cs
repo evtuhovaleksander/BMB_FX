@@ -230,6 +230,15 @@ namespace BMB_FX
         public Operation_Window_Interval[] S;
         public int Penalty;
 
+        public bool hasNull()
+        {
+            for (int i = 0; i < S.Length; i++)
+            {
+                if (S[i] == null) return true;
+            }
+            return false;
+        }
+
         public bool is_Valid()
         {
            
@@ -266,6 +275,17 @@ namespace BMB_FX
             Penalty += masters.Count*Master_Mind.master_penalty;
             Penalty += resources.Count * Master_Mind.resource_penalty;
         }
+
+
+
+        //public Sequence Copy(Sequence c)
+        //{
+        //    c=new Sequence(c.S.Length);
+        //    for (int i = 0; i < UPPER; i++)
+        //    {
+                
+        //    }
+        //}
     }
 
 

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BMB_FX.ORM;
 using System.Drawing;
+using BMB_FX.CoordinationWindow.Search_Window;
 using BMB_FX.Element_Show;
 
 namespace BMB_FX
@@ -409,8 +410,8 @@ namespace BMB_FX
         Master_Gui_Container master_GuiContainer;
         Resource_Gui_Container resource_GuiContainer;
         GroupService groupService;
-        DateTime day;
-        private List<List<Window_Interval>> Operation_Windows;
+        public DateTime day;
+        public  List<List<Window_Interval>> Operation_Windows;
 
         public Head_Master_Class(Master_Gui_Container masterGuiContainer, Resource_Gui_Container resourceGuiContainer, GroupService groupService, DateTime day)
         {
@@ -429,9 +430,192 @@ namespace BMB_FX
             }
         }
 
-     
+        public List<Sequence> outt;
 
-        public Group_Operation_Project Get_OperationProject(bool filter)
+        public List<Sequence>[] mas_sol; 
+
+        public void Recursia(int cur_time,int level, Sequence curentSequence, List<List<Window_Interval>> windows)
+        {
+            if (level != 0)
+            {
+                if (mas_sol[curentSequence.S[0].start].Count >= 1000)
+                { return; }
+            }
+            for (int i = 0; i < windows[level].Count; i++)
+            {
+               
+                for (int j = cur_time; j <= windows[level][i].stop; j++)
+                {
+                   
+
+                    if ((j + groupService.Operations[level].Length - 1 <= windows[level][i].stop)&&(j>=cur_time)&&(j>= windows[level][i].start))
+                    {
+                        
+                        if (level == 0)
+                        {
+                            curentSequence.S[level] = new Operation_Window_Interval(windows[level][i], j, j + groupService.Operations[level].Length - 1, false, 0);
+                        }
+                        else
+                        {
+                            curentSequence.S[level] = new Operation_Window_Interval(windows[level][i], j, j + groupService.Operations[level].Length - 1, true, j - cur_time);
+                        }
+
+                        if (level == groupService.Operations.Count - 1)
+                        {
+                            
+                                if (curentSequence.is_Valid())
+                                {
+                                    Sequence nc = new Sequence(curentSequence.S.Length);
+                                    for (int k = 0; k < nc.S.Length; k++)
+                                    {
+                                        nc.S[k] = curentSequence.S[k];
+                                    }
+                                    nc.calc_Penalty();
+                                    outt.Add(nc);
+
+
+                                    mas_sol[curentSequence.S[0].start].Add(nc);
+                                //    Console.WriteLine(curentSequence.S[0].start+"---" + mas_sol[curentSequence.S[0].start].Count);
+
+                                    return;
+                                }
+                            
+                        }
+                        else
+                        {
+                            if (curentSequence.S[level] != null)
+                            {
+                                if (curentSequence.S[level].has_previous)
+                                {
+                                    if (curentSequence.S[level].delay_till_previous <= Master_Mind.max_wait_time)
+                                    {
+                                        int ncur = curentSequence.S[level].stop + 1;
+                                        Recursia(ncur, level + 1, curentSequence, windows);
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                   
+                                }
+                                else
+                                {
+                                    int ncur = curentSequence.S[level].stop + 1;
+                                    Recursia(ncur, level + 1, curentSequence, windows);
+                                }
+                                
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                        }
+
+
+                    }
+
+                    
+                }
+            }
+        }
+
+        public Group_Operation_Project Get_OperationProject1(bool filter)
+        {
+            for (int i = 0; i < Operation_Windows.Count; i++)
+            {
+                Operation_Windows[i].Sort((x, y) => x.start.CompareTo(y.start));
+            }
+
+
+
+            List<Sequence> Projects = new List<Sequence>();
+            for (int i = 0; i < Operation_Windows[0].Count; i++) // итерация по всем окнам 0го этапа
+            {
+                for (int j = Operation_Windows[0][i].start; j < Operation_Windows[0][i].stop; j++)// итерация по квантам окна
+                {
+
+                    if (Operation_Windows[0][i].in_window(j + groupService.Operations[0].Length - 1))
+                    {
+                        Sequence CurentProject = new Sequence(groupService.Operations.Count);
+                        CurentProject.S[0] = new Operation_Window_Interval(Operation_Windows[0][i], j, j + groupService.Operations[0].Length - 1, false, 0);
+
+
+                        int offset = groupService.Operations[0].Length;
+                        for (int k = 1; k < groupService.Operations.Count; k++)// подберем в секвенцию 2е и далее окна
+                        {
+                            for (int l = 0; l < Operation_Windows[k].Count; l++)//по итым окнам
+                            {
+
+
+
+                                List<Sequence> win_sequences = new List<Sequence>();
+                                for (int m = Operation_Windows[k][l].start; m <= Operation_Windows[k][l].stop; m++) // по квантам итого окна
+                                {
+                                    if (Operation_Windows[k][l].in_window(m + groupService.Operations[k].Length - 1))
+                                    {
+                                        if (m > CurentProject.S[k - 1].stop)
+                                        {
+                                            CurentProject.S[k] = new Operation_Window_Interval(Operation_Windows[k][l], m, m + groupService.Operations[k].Length - 1, true, m - 1 - CurentProject.S[k - 1].stop);
+                                            if (k + 1 == groupService.Operations.Count)
+                                            {
+
+                                                bool er = false;
+                                                for (int z = 0; z < CurentProject.S.Length; z++)
+                                                {
+                                                    if (CurentProject.S[z] == null)
+                                                    {
+                                                        er = true;
+                                                    }
+                                                    else
+                                                    {
+                                                        if (CurentProject.S[z].length != groupService.Operations[z].Length)
+                                                        {
+                                                            er = true;
+                                                        }
+
+                                                    }
+                                                }
+                                                if (!er)
+                                                {
+                                                    Sequence cseq = new Sequence(CurentProject.S.Length);
+                                                    for (int n = 0; n < CurentProject.S.Length; n++)
+                                                    {
+                                                        cseq.S[n] = CurentProject.S[n];
+                                                    }
+                                                    if (cseq.is_Valid()) win_sequences.Add(cseq);
+                                                }
+
+                                            }
+
+
+                                        }
+
+
+                                    }
+                                }
+                                Projects.AddRange(win_sequences);
+                            }
+                            offset += groupService.Operations[k].Length;
+                        }
+
+
+
+
+
+                    }
+
+
+
+
+                }
+            }
+
+            return new Group_Operation_Project(Projects, day);
+
+        }
+
+        public Group_Operation_Project Get_OperationProject2(bool filter)
         {
             for (int i = 0; i < Operation_Windows.Count; i++)
             {
@@ -654,16 +838,32 @@ namespace BMB_FX
             {
                 HMC_list.Add(new Head_Master_Class(masterGuiContainer, resourceGuiContainer, GroupService, lst[i]));
             }
-            set_GOP_List(true);
+            set_GOP_List();
             return get_TimeLineData();
         }
-
-        public void set_GOP_List(bool filter)
+        public void set_GOP_List()
+        {
+            GOP_List = new List<Group_Operation_Project>();
+            for (int i = 0; i < HMC_list.Count; i++)
+            {
+                Sequence s = new Sequence(GroupService.Operations.Count);
+                HMC_list[i].outt=new List<Sequence>();
+                HMC_list[i].mas_sol = new List<Sequence>[288];
+                for (int j = 0; j < 288; j++)
+                {
+                    HMC_list[i].mas_sol[j]=new List<Sequence>();
+                }
+                HMC_list[i].Recursia(0, 0, s, HMC_list[i].Operation_Windows);
+                Group_Operation_Project gop=new Group_Operation_Project(HMC_list[i].outt,HMC_list[i].day);
+                GOP_List.Add(gop);
+            }
+        }
+        public void set_GOP_ListOld(bool filter)
         {
             GOP_List=new List<Group_Operation_Project>();
             for (int i = 0; i < HMC_list.Count; i++)
             {
-                GOP_List.Add(HMC_list[i].Get_OperationProject(filter));
+                //GOP_List.Add(HMC_list[i].Get_OperationProject(filter));
             }
         }
 
